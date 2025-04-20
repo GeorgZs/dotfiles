@@ -1,0 +1,44 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   $HOME/.config/ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+font-family = "FiraCode Nerd Font Mono"
+
+# Cursor styling
+
+# OPTIONS: bar, block, underline, block_hollow
+cursor-style = bar
+adjust-cursor-thickness = 100%
+# cursor-style-blink = false
+# shell-integration-features = no-cursor
+#######################
+
+# Background styling
+background-opacity = 0.99
+background-blur-radius = 20
+#########################
+
+confirm-close-surface=false
+
+keybind = performable:ctrl+v=paste_from_clipboard
+# BELOW: only works on mac - use DD-term for GNOME
+# keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
+shell-integration = zsh
+
+window-theme = system
+gtk-wide-tabs = false
+gtk-adwaita = false

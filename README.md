@@ -1,5 +1,8 @@
 # Dotfiles
 
-Just some lua files for the nvim setup
+Using GNU stow, create a Dotfile directory with the following
 
-Currently setting up support for Rust, Scala, etc
+- Ghostty Config
+- Nvim config
+- Git config
+- Starship config

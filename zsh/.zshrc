@@ -7,7 +7,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Add nvim and apache maven to path
 export PATH="$PATH:/opt/nvim/"
@@ -21,8 +21,13 @@ export ELECTRON_OZONE_PLATFORM_HINT=auto
 # Set XDG home dir (default)
 export XDG_DATA_HOME="$HOME/.local/share"
 
-# Set .dotfiles folder location
+# Set .dotfiles folder locations for easy entry
 export DOT=$HOME/.dotfiles
+export NVIM_CONF=$DOT/nvim/.config/nvim
+export ZSH_CONF=$DOT/zsh
+export STARSHIP_CONF=$DOT/starship
+export GHOSTTY_CONF=$DOT/ghostty/.config/ghostty
+export GIT_CONF=$DOT/git
 
 # ZSH plugins
 plugins=(
@@ -42,7 +47,7 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="vim $ZSH_CONF/.zshrc"
 alias ll='ls -alF'
 alias cd='z'
 
@@ -61,10 +66,7 @@ alias reset_bat='busctl call org.stefanhoelzl.frameworkd /battery org.stefanhoel
 alias codium='flatpak run com.vscodium.codium'
 alias code="code --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# 
+# Export local bath with bin directory 
 export PATH="$PATH:$HOME/.local/bin"
 
 # pnpm
@@ -74,7 +76,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-
-
 

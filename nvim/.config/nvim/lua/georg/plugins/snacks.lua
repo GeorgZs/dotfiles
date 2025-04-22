@@ -2,11 +2,19 @@ return {
   "folke/snacks.nvim",
   ---@type snacks.Config
   opts = function()
-    -- Get the current terminal width
+    -- Get the current nvim width
     local width = vim.o.columns
 
     -- Decide the pane based on terminal width
     local terminal_pane = width < 100 and 2 or 1
+
+    -- Custom terminal opening keymap
+    vim.keymap.set("n", "<C-t>", function()
+      Snacks.terminal.toggle()
+    end, { desc = "Toggle terminal", noremap = true, silent = true })
+    vim.keymap.set("t", "<C-t>", function()
+      Snacks.terminal.toggle()
+    end, { desc = "Toggle close the terminal" })
 
     return {
       dashboard = {
@@ -38,7 +46,8 @@ return {
           { section = "startup" },
         },
       },
-      image = {},
+      image = {}, -- image display
+      terminal = {}, -- vscode style terminal panes
     }
   end,
 }

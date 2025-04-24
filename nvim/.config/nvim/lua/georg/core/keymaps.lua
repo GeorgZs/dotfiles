@@ -17,6 +17,9 @@ keymap.set("n", "<leader>Y", '"+Y')
 -- Make file executable (for bash scripts, etc)
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+keymap.set("v", "<Tab>", ">gv", { desc = "Indent selected lines" })
+keymap.set("v", "<S-Tab>", "<gv", { desc = "Un-INDENT selected lines" })
+
 -- Exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 

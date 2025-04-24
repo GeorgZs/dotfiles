@@ -36,11 +36,11 @@ return {
         sections = {
           {
             section = "terminal",
-            cmd = "pokemon-colorscripts -n machamp --no-title; sleep .1",
+            cmd = "pokemon-colorscripts -n giratina -s --no-title; sleep .1",
             random = 100,
             pane = terminal_pane,
             indent = 3,
-            height = 20,
+            height = 17,
           },
           { section = "keys", gap = 1, padding = 1 },
           { section = "startup" },

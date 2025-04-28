@@ -9,10 +9,10 @@ return {
     local terminal_pane = width < 100 and 2 or 1
 
     -- Custom terminal opening keymap
-    vim.keymap.set("n", "<C-t>", function()
+    vim.keymap.set("n", "<C-g>", function()
       Snacks.terminal.toggle()
     end, { desc = "Toggle terminal", noremap = true, silent = true })
-    vim.keymap.set("t", "<C-t>", function()
+    vim.keymap.set("t", "<C-g>", function()
       Snacks.terminal.toggle()
     end, { desc = "Toggle close the terminal" })
 

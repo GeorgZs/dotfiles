@@ -17,6 +17,7 @@ keymap.set("n", "<leader>Y", '"+Y')
 -- Make file executable (for bash scripts, etc)
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+-- Bulk indent in v mode
 keymap.set("v", "<Tab>", ">gv", { desc = "Indent selected lines" })
 keymap.set("v", "<S-Tab>", "<gv", { desc = "Un-INDENT selected lines" })
 

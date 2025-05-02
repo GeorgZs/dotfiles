@@ -18,24 +18,19 @@
 font-family = "FiraCode Nerd Font Mono"
 
 # Cursor styling
-
-# OPTIONS: bar, block, underline, block_hollow
 cursor-style = bar
 adjust-cursor-thickness = 100%
-# cursor-style-blink = false
-# shell-integration-features = no-cursor
 #######################
 
 # Background styling
 background-opacity = 0.99
 background-blur-radius = 20
+theme = GruvboxDark
 #########################
 
+# quick fixes for terminal commands
 confirm-close-surface=false
-
 keybind = performable:ctrl+v=paste_from_clipboard
-# BELOW: only works on mac - use DD-term for GNOME
-# keybind = global:ctrl+grave_accent=toggle_quick_terminal
 
 shell-integration = zsh
 

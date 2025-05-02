@@ -25,7 +25,7 @@ opt.background = "dark"
 opt.signcolumn = "yes"
 
 -- backspace
-opt.backspace = "indent,eol,start" -- allow backspace on indent, eol or insert mode start position 
+opt.backspace = "indent,eol,start" -- allow backspace on indent, eol or insert mode start position
 
 -- clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
@@ -33,3 +33,4 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 -- split windows
 opt.splitright = true -- split veritcal window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
+

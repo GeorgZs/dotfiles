@@ -50,6 +50,7 @@ eval "$(starship init zsh)"
 alias zshconfig="vim $ZSH_CONF/.zshrc"
 alias ll='ls -alF'
 alias cd='z'
+alias cat="batcat"
 
 # AI Sweden vpn
 alias aivpn='sudo openfortivpn -c $HOME/.config/aivpn.config'
@@ -65,6 +66,9 @@ alias reset_bat='busctl call org.stefanhoelzl.frameworkd /battery org.stefanhoel
 # Wayland support and opening shortcuts
 alias codium='flatpak run com.vscodium.codium'
 alias code="code --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto"
+
+# Custom terminal navigation
+alias x="exit"
 
 # Export local bath with bin directory 
 export PATH="$PATH:$HOME/.local/bin"

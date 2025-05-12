@@ -60,8 +60,8 @@ alias update='sudo nala upgrade && sudo nala update && sudo snap refresh && flat
 
 # Battery monitoring
 alias bat_info='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
-alias full_bat='busctl call org.stefanhoelzl.frameworkd /battery org.stefanhoelzl.framework.Battery SetChargeLimit y 100'
-alias reset_bat='busctl call org.stefanhoelzl.frameworkd /battery org.stefanhoelzl.framework.Battery SetChargeLimit y 80'
+alias full_bat='busctl call org.stefanhoelzl.frameworkd /battery org.stefanhoelzl.framework.Battery SetChargeLimit y 100 && echo "Battery Limit set to 100"'
+alias reset_bat='busctl call org.stefanhoelzl.frameworkd /battery org.stefanhoelzl.framework.Battery SetChargeLimit y 80 && echo "Battery Limit reset at 80%"'
 
 # Wayland support and opening shortcuts
 alias codium='flatpak run com.vscodium.codium'

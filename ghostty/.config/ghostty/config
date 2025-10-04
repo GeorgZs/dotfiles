@@ -37,3 +37,4 @@ shell-integration = zsh
 window-theme = system
 gtk-wide-tabs = false
 gtk-adwaita = false
+

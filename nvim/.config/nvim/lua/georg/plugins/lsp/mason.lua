@@ -24,21 +24,18 @@ return {
       },
     })
 
-    mason_lspconfig.setup({
+    --[[ mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
         "html",
+        "jdtls",
         "cssls",
-        "tailwindcss",
-        "svelte",
         "lua_ls",
         "graphql",
-        "emmet_ls",
-        "prismals",
         "pyright",
-        "rust_analyzer"
+        "rust_analyzer",
       },
-    })
+    }) ]]
 
     mason_tool_installer.setup({
       ensure_installed = {
@@ -51,4 +48,4 @@ return {
       },
     })
   end,
-} 
+}

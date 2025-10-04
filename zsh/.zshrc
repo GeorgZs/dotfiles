@@ -14,6 +14,7 @@ export PATH="$PATH:/opt/nvim/"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/opt/apache-maven-3.9.9"
 export PATH="$PATH:/opt/apache-maven-3.9.9/bin"
+export PATH="$PATH:/usr/lib/jvm/java-11-openjdk-amd64/bin"
 
 # Set electron hint for Wayland trigger
 export ELECTRON_OZONE_PLATFORM_HINT=auto

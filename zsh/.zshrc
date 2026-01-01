@@ -15,6 +15,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/opt/apache-maven-3.9.9"
 export PATH="$PATH:/opt/apache-maven-3.9.9/bin"
 export PATH="$PATH:/usr/lib/jvm/java-11-openjdk-amd64/bin"
+export PATH="$PATH:$HOME/yazi/target/release"
 
 # Set electron hint for Wayland trigger
 export ELECTRON_OZONE_PLATFORM_HINT=auto
@@ -33,7 +34,7 @@ export GIT_CONF=$DOT/git
 # ZSH plugins
 plugins=(
   git
-  zsh-syntax-highlighting
+ # zsh-syntax-highlighting
   fast-syntax-highlighting
   zsh-autosuggestions
 )
@@ -51,7 +52,7 @@ eval "$(starship init zsh)"
 alias zshconfig="vim $ZSH_CONF/.zshrc"
 alias ll='ls -alF'
 alias cd='z'
-alias cat="batcat"
+# alias cat="batcat"
 
 # AI Sweden vpn
 alias aivpn='sudo openfortivpn -c $HOME/.config/aivpn.config'
@@ -82,3 +83,39 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+
+. "$HOME/.local/share/../bin/env"
+
+
+export NVM_DIR="$HOME/.nvm"
+
+load-nvm() {
+  unset -f nvm node npm pnpm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+}
+
+nvm()   { load-nvm; nvm  "$@"; }
+node()  { load-nvm; node "$@"; }
+npm()   { load-nvm; npm  "$@"; }
+pnpm()  { load-nvm; pnpm "$@"; }
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/home/georg/.bun/_bun" ] && source "/home/georg/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

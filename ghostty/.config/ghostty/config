@@ -16,6 +16,12 @@
 # on Ghostty's website, at https://ghostty.org/docs/config.
 
 font-family = "FiraCode Nerd Font Mono"
+# Set the width to 80 characters/columns
+window-width = 80
+
+# Set the height to 24 lines/rows
+window-height = 30 
+font-size = 12
 
 # Cursor styling
 cursor-style = bar
@@ -23,18 +29,20 @@ adjust-cursor-thickness = 100%
 #######################
 
 # Background styling
-background-opacity = 0.99
-background-blur-radius = 20
-theme = GruvboxDark
+background-opacity = 0.95
+background-blur-radius = 0
+theme = Gruvbox Dark
 #########################
 
 # quick fixes for terminal commands
 confirm-close-surface=false
 keybind = performable:ctrl+v=paste_from_clipboard
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
 
+# Extra stuff
 shell-integration = zsh
-
-window-theme = system
+window-theme = ghostty 
 gtk-wide-tabs = false
-gtk-adwaita = false
+window-titlebar-background = "#3c3836" 
+
 

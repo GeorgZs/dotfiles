@@ -33,7 +33,7 @@
     "exec": "~/.dots/config/waybar/os_icon.sh",
     "interval": "once",
     "format": "{}",
-    "on-click": "rofi --show drun",
+    "on-click": "rofi -show drun",
     "tooltip": false 
   },
 

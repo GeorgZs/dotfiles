@@ -71,6 +71,7 @@ alias code="code --enable-features=UseOzonePlatform,WaylandWindowDecorations --o
 
 # Custom terminal navigation
 alias x="exit"
+alias y="yazi"
 
 # Export local bath with bin directory 
 export PATH="$PATH:$HOME/.local/bin"

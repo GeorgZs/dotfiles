@@ -45,4 +45,4 @@ window-theme = ghostty
 gtk-wide-tabs = false
 window-titlebar-background = "#3c3836" 
 
-
+gtk-titlebar-style=tabs

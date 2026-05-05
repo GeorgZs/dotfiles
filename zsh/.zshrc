@@ -39,14 +39,17 @@ plugins=(
   zsh-autosuggestions
 )
 
-# add plugins to oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
 # zoxide config
 eval "$(zoxide init zsh)"
 
+export _ZO_DOCTOR=0
+
 # starship eval
 eval "$(starship init zsh)"
+
+# add plugins to oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
 
 # Example aliases
 alias zshconfig="vim $ZSH_CONF/.zshrc"
@@ -120,3 +123,6 @@ autoload -Uz _zinit
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# go installation
+export PATH=$PATH:/usr/local/go/bin
